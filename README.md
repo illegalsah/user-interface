@@ -7,9 +7,11 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-Step 1 -> For Styled component
-install styled component librery
-#npm i styled-components
+* Step 1 -> For Styled component
+  install styled component librery
+
+# npm i styled-components
+
 ->Component Level
 use of -> Create Style component import "styled" and put "." and then add your tag do the styles there. One thing to remember that as it'll return a component then we need to store in variable with Uppercase. Not only the tag name we can write any name there for use.
 What ever you write the styles here it'll extract in the current component scope.
@@ -47,19 +49,19 @@ const StyledApp = styled.div`  background-color: var(--color-blue-100);
 Note: in JSX format we can write in styled component
 Not only this things we can pass through the props as well just profide the proper props name with value
 
-Step 2 -> Routing
+- Step 2 -> Routing
 
 # npm i react-router-dom@6
 
 work with router dom
 
-Step 3 -> add icons
+- Step 3 -> add icons
 
 # npm i react-icons
 
 and add the react icons
 
-Step 4 -> Add ReactQuery for remote state management
+- Step 4 -> Add ReactQuery for remote state management
 
 # npm i @tanstack/react-query@4
 
@@ -113,7 +115,7 @@ queryKey:["user"]
 
 and use mutate(id) in onClick event listner
 
-Step -5 React Query Devtools use
+- Step -5 React Query Devtools use
 
 # npm i @tanstack/react-query-devtools@4
 
@@ -129,13 +131,13 @@ After instal enable it
 </BrowserRouter>
 </QueryClientProvider>
 
-step- 6 working with data
-it's deficult to calculate and handle the date function we can use
+- step- 6 working with data
+  it's deficult to calculate and handle the date function we can use
 
 # npm i date-fns
 
-step- 7 working with notification we want to show
-we can use react-hot-toast
+- step- 7 working with notification we want to show
+  we can use react-hot-toast
 
 # npm i react-hot-toast
 
@@ -169,8 +171,8 @@ Now we can any where in our application just by using toast
 toast.error(err.message);
 toast.success("Deleted successfully");
 
-step - 8 Handing the form with proper validation is dificult
-we can use react-hook-form
+- step - 8 Handing the form with proper validation is dificult
+  we can use react-hook-form
 
 # npm i react-hook-form@7
 
