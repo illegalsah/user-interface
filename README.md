@@ -23,18 +23,18 @@ Create Style component import `styled` and put `.` and then add your **_html tag
 What ever you write the styles here it'll extract in the current component scope.
 Example :
 
-```
+```JSX
 import styled from "styled-components";
 function App() {
 const H1 = styled.h1`
     font-size: 30px;
     font-weight: 600;
     color: blue;`;
-return (
-    <div>
-        <H1>Hello world</H1>
-    </div>
-);
+  return (
+      <div>
+          <H1>Hello world</H1>
+      </div>
+  );
 }
 ```
 
@@ -46,14 +46,14 @@ If you want the vs-code extention for styled-component use `vscode-styled-compon
 Just create a Global Styles by using `createGlobalStyle` with _ ` _ direct put you styles here. Store in a variable and export it as well. At the time using, just remember one thing it should self contained.
 Example:
 
-```
+```JSX
 <GlobalStyles/>
 ```
 
 > Use css in styled function
 > Example:
 
-```
+```JSX
 import styled, { css } from "styled-components";
 function App() {
 const test = css`
@@ -93,7 +93,7 @@ first set time by creating query client
 
 Example :
 
-```
+```JSX
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 function App() {
@@ -120,7 +120,7 @@ After that we need to use the react query for remote fetching
 
 1. only for get the data from remote server
 
-```
+```JSX
    const reseved = useQuery({
         queryKey: ["users"],
         queryFn: getUsers,
@@ -130,14 +130,14 @@ After that we need to use the react query for remote fetching
 
 And here we can destracture the data like
 
-```
+```JSX
 const {isLoading,data,error} = useQuery()
 ```
 
 2. **For deleting we use**
    Look the example bellow : after that we need to update and quick fetch query client, to call existing query client we use useQueryClient hook. and provide the key there.
 
-```
+```JSX
 const query = useQueryClient(); // for updated query cache
 const { isLoading, mutate } = useMutation({
   mutationFn: (id) => deleteUser(id), // we can write mutationFn: deleteUser,
@@ -155,7 +155,7 @@ and use mutate(id) in onClick event listner
 
 After instal enable it
 
-```
+```JSX
 <QueryClientProvider client={queryClient}>
   <ReactQueryDevtools initialIsOpen={false} />
     <BrowserRouter>
@@ -184,7 +184,7 @@ we can use react-hot-toast
 
 And provide the design how you want to show if success and error timing with styles we need to provide the details
 
-```
+```JSX
 </BrowserRouter>
   <Toaster
     position="top-center"
@@ -210,7 +210,7 @@ And provide the design how you want to show if success and error timing with sty
 
 _Now we can any where in our application just by using toast_
 
-```
+```JSX
 toast.error(err.message);
 toast.success("Deleted successfully");
 ```
@@ -226,7 +226,7 @@ for working with form we `useForm()` hook
 **handleSubmit ->** this function after geeting the data what we want to do.
 **reset ->** for clearing the form data, we need to just call the `reset()` fn
 
-```
+```JSX
 const { register, handleSubmit, reset } = useForm();
 
 const onSubmitCustomHandler = (data) => {
@@ -242,7 +242,7 @@ const onSubmitCustomHandler = (data) => {
 **Validation ->**
 just we need to execute the fn that exist in register fn and provide the errors to handleSubmit fn. falow the Example:
 
-```
+```JSX
 function onErrorOcured(errors){
 console.log(errors)
 }
@@ -267,7 +267,7 @@ console.log(errors)
 
 Lot much more things we need to do here:
 
-```
+```JSX
 const { register, handleSubmit,errors } = useForm();
 <input id="username"
           {...register("username", {
